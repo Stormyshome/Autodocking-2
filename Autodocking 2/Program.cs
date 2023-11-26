@@ -187,7 +187,6 @@ namespace IngameScript
 
 
         }
-
         //Help from Whip.
         private double AlignWithGravity(Waypoint waypoint, bool requireYawControl)
         {
@@ -261,6 +260,7 @@ namespace IngameScript
 
             return -1;
         }
+
         private double AlignWithWaypoint(Waypoint waypoint)
         {
 
@@ -362,7 +362,6 @@ namespace IngameScript
             //if (copy_paste_persistant_memory)
             //    Me.CustomData += data;
         }
-
         /// <summary>Begins the ship docking sequence. Requires (Will require) a HomeLocation and argument.</summary>
         /// <param name="beginConnector"></param>
         /// <param name="argument"></param>
@@ -490,7 +489,6 @@ namespace IngameScript
                 return "SAVED\nSaved docking location as " + argument + ", " + your_title + ".";
             return "Saved docking location as " + argument + ", " + your_title + ".";
         }
-
 
         private bool recording = false;
         private bool waiting_for_arg = false;
@@ -693,8 +691,6 @@ namespace IngameScript
                 return null;
             }
         }
-
-
 
         public void ClearMemoryLocation(string argument)
         {
@@ -1253,8 +1249,6 @@ namespace IngameScript
             }
         }
 
-
-
         private double AutoFollowWaypoint(Waypoint currentWaypoint, Waypoint nextWaypoint)
         {
             shipIOHandler.DockingSequenceStartMessage(current_argument);
@@ -1331,9 +1325,6 @@ namespace IngameScript
 
             return dist_left;
         }
-
-
-
 
         private double MoveToWaypoint(Waypoint waypoint)
         {
@@ -1500,9 +1491,7 @@ namespace IngameScript
             return totalDistanceLeft;
         }
 
-
-        private void SetResultantAcceleration(Vector3D Gravity_And_Unknown_Forces, Vector3D TargetForceDirection,
-            double proportionOfThrustToUse)
+        private void SetResultantAcceleration(Vector3D Gravity_And_Unknown_Forces, Vector3D TargetForceDirection, double proportionOfThrustToUse)
         {
             var maxForceThrusterGroup = systemsAnalyzer.SolveMaxThrust(-Gravity_And_Unknown_Forces,
                 TargetForceDirection, proportionOfThrustToUse);
@@ -1566,7 +1555,5 @@ namespace IngameScript
                             thisThruster.SetValue("Override", 0f);
             }
         }
-
-
     }
 }
